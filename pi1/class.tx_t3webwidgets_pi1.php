@@ -91,6 +91,11 @@ class tx_t3webwidgets_pi1 extends tslib_pibase {
 							$this->twitter($conf, intval($tkey));
 						}
 					break;
+					case 'Beat':
+						foreach ($val as $tkey => $conf) {
+							$this->beat($conf, intval($tkey));
+						}
+					break;
 					case 'Flickr':
 						foreach ($val as $akey => $conf) {
 				   			$this->flickr($conf, intval($akey));
@@ -202,6 +207,47 @@ class tx_t3webwidgets_pi1 extends tslib_pibase {
 		$this->jsInline .= chr(10) . $js;
 		
 		$html = t3lib_div::getURL(t3lib_extMgm::extPath($this->extKey) . 'widgets/twitter/twitter.html');
+		$html = strtr($html, array(
+			'###ID###' => $this->id,
+			'###INDEX###' => $key,
+		));
+		$this->html .= $html;
+	}   
+	
+	
+	protected function beat($conf, $key) {
+		$count = 10;
+		$page = 1;
+		$search = 'typo3';
+		
+		
+		if (intval($conf['beatType']) == 0) {
+			$url = 'http://beat.typo3.org/api/statuses/public_timeline.json';
+		} else {
+			$url = 'http://search.twitter.com/search.json?q=' . $conf['twitterKeyword'] . '&rpp=15';
+		}
+		$this->settings['beat_' .  $this->id . '_' . $key] = array(
+			'url' => $url .  '&count=' . $count . '&page=' . $page,
+			'div' => 'beat-grid-' . $this->id,
+			'width' => intval($conf['beatWidth']),
+			'height' => intval($conf['beatHeight']),
+			'imageWidth' => intval($conf['beatImageWidth']),
+			'interval' => $conf['beatInterval'] * 1000,
+		);
+		
+		$this->cssFiles[] = 'typo3conf/ext/t3webwidgets/widgets/beat/beat.css';
+		if ($this->conf['beat.']['additionalCSSfile']) {
+ 			$this->cssFiles[] = $this->conf['beat.']['additionalCSSfile'];		
+		}
+		
+		$js = t3lib_div::getURL(t3lib_extMgm::extPath($this->extKey) . 'widgets/beat/beat.js');
+		$js = strtr($js, array(
+			'###INDEX###' =>  $this->id . '_' . $key,
+		));
+		$js = t3lib_div::minifyJavaScript($js, $error);
+		$this->jsInline .= chr(10) . $js;
+		
+		$html = t3lib_div::getURL(t3lib_extMgm::extPath($this->extKey) . 'widgets/beat/beat.html');
 		$html = strtr($html, array(
 			'###ID###' => $this->id,
 			'###INDEX###' => $key,

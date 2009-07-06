@@ -100,6 +100,92 @@
 							</twitterKeyword>
 						</el>
 					</Twitter>
+					<Beat>
+						<type>array</type>
+						<tx_templavoila>
+							<title>Beat</title>
+						</tx_templavoila>
+						<el>
+							<beatWidth>
+								<TCEforms>
+									<label>Width:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>350</default>
+									</config>
+								</TCEforms>
+							</beatWidth>
+							<beatHeight>
+								<TCEforms>
+									<label>Height:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>350</default>
+									</config>
+								</TCEforms>
+							</beatHeight>
+							<beatImageWidth>
+								<TCEforms>
+									<label>Image width:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>70</default>
+									</config>
+								</TCEforms>
+							</beatImageWidth>
+							<beatInterval>
+								<TCEforms>
+									<label>Refresh Interval (seconds):</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>10</max>
+										<eval>int</eval>
+										<default>30</default>
+									</config>
+								</TCEforms>
+							</beatInterval>
+							<beatType>
+								<TCEforms>
+									<label>Type:</label>
+									<config>
+										<type>select</type>
+										<items>
+											<numIndex index="0">
+												<numIndex index="0">Public Timeline</numIndex>
+												<numIndex index="1">0</numIndex>
+											</numIndex> 
+											<numIndex index="1">
+												<numIndex index="0">Search</numIndex>
+												<numIndex index="1">1</numIndex>
+											</numIndex> 
+										</items>
+									</config>
+								</TCEforms>
+							</beatType>
+							<beatKeyword>
+								<TCEforms>
+									<label>Keyword:</label>
+									<config>
+										<type>input</type>
+										<size>30</size>
+										<max>50</max>
+										<default></default>
+										<required>1</required>
+									</config>
+								</TCEforms>
+							</beatKeyword>
+						</el>
+					</Beat>
 					<Flickr>
 						<type>array</type>
 						<tx_templavoila>

@@ -1,0 +1,13 @@
+.t3webwidgets-beat span.user-from a {
+	font-weight: bold;
+	color:blue;
+	text-decoration:none;
+	padding-bottom:4px;
+	font-size:110%;
+}
+.t3webwidgets-beat span.user-from-date {
+
+}
+.t3webwidgets-beat span.theMessage {
+	white-space:normal;
+}
