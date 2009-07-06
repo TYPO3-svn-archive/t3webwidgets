@@ -1,0 +1,278 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+		<langChildren>1</langChildren>
+	</meta>
+	<ROOT>
+		<type>array</type>
+		<el>
+			<Widgets>
+				<tx_templavoila>
+					<title>Web Widgets</title>
+				</tx_templavoila>
+				<label>Widgets:</label> 
+				<section>1</section>
+				<type>array</type>
+				<el>
+					<Twitter>
+						<type>array</type>
+						<tx_templavoila>
+							<title>Twitter</title>
+						</tx_templavoila>
+						<el>
+							<twitterWidth>
+								<TCEforms>
+									<label>Width:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>350</default>
+									</config>
+								</TCEforms>
+							</twitterWidth>
+							<twitterHeight>
+								<TCEforms>
+									<label>Height:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>350</default>
+									</config>
+								</TCEforms>
+							</twitterHeight>
+							<twitterImageWidth>
+								<TCEforms>
+									<label>Image width:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>70</default>
+									</config>
+								</TCEforms>
+							</twitterImageWidth>
+							<twitterInterval>
+								<TCEforms>
+									<label>Refresh Interval (seconds):</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>10</max>
+										<eval>int</eval>
+										<default>30</default>
+									</config>
+								</TCEforms>
+							</twitterInterval>
+							<twitterType>
+								<TCEforms>
+									<label>Type:</label>
+									<config>
+										<type>select</type>
+										<items>
+											<numIndex index="0">
+												<numIndex index="0">User</numIndex>
+												<numIndex index="1">0</numIndex>
+											</numIndex> 
+											<numIndex index="1">
+												<numIndex index="0">Search</numIndex>
+												<numIndex index="1">1</numIndex>
+											</numIndex> 
+										</items>
+									</config>
+								</TCEforms>
+							</twitterType>
+							<twitterKeyword>
+								<TCEforms>
+									<label>Keyword:</label>
+									<config>
+										<type>input</type>
+										<size>30</size>
+										<max>50</max>
+										<default></default>
+										<required>1</required>
+									</config>
+								</TCEforms>
+							</twitterKeyword>
+						</el>
+					</Twitter>
+					<Flickr>
+						<type>array</type>
+						<tx_templavoila>
+							<title>Flickr</title>
+						</tx_templavoila>
+						<el>
+							<flickrTitle>
+								<TCEforms>
+									<label>Title:</label>
+									<config>
+										<type>input</type>
+										<size>30</size>
+										<max>50</max>
+										<default></default>
+									</config>
+								</TCEforms>
+							</flickrTitle>
+							<flickrMode>
+								<TCEforms>
+									<label>Mode:</label>
+									<config>
+										<type>select</type>
+										<items>
+											<numIndex index="0">
+												<numIndex index="0">Group (Keyword=GroupId)</numIndex>
+												<numIndex index="1">0</numIndex>
+											</numIndex> 
+											<numIndex index="1">
+												<numIndex index="0">Tag (Keyword=Tag))</numIndex>
+												<numIndex index="1">1</numIndex>
+											</numIndex>
+											<numIndex index="2">
+												<numIndex index="0">Userpics (Keyword=UserId))</numIndex>
+												<numIndex index="1">2</numIndex>
+											</numIndex> 
+										</items>
+									</config>
+								</TCEforms>
+							</flickrMode>
+							<flickrKeyword>
+								<TCEforms>
+									<label>Keyword:</label>
+									<config>
+										<type>input</type>
+										<size>30</size>
+										<max>30</max>
+										<default></default>
+									</config>
+								</TCEforms>
+							</flickrKeyword>
+							<flickrWidth>
+								<TCEforms>
+									<label>Width:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>350</default>
+									</config>
+								</TCEforms>
+							</flickrWidth>
+							<flickrHeight>
+								<TCEforms>
+									<label>Height:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>350</default>
+									</config>
+								</TCEforms>
+							</flickrHeight>
+							<flickrPicHeight>
+								<TCEforms>
+									<label>Picture height:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>3</max>
+										<eval>int</eval>
+										<default>80</default>
+									</config>
+								</TCEforms>
+							</flickrPicHeight>
+							<flickrStyle>
+								<TCEforms>
+									<label>Style:</label>
+									<config>
+										<type>select</type>
+										<items>
+											<numIndex index="0">
+												<numIndex index="0">Panel</numIndex>
+												<numIndex index="1">0</numIndex>
+											</numIndex> 
+											<numIndex index="1">
+												<numIndex index="0">Carousel</numIndex>
+												<numIndex index="1">1</numIndex>
+											</numIndex> 
+										</items>
+									</config>
+								</TCEforms>
+							</flickrStyle>
+							<flickrLightbox>
+								<TCEforms>
+									<label>Lightbox:</label>
+									<config>
+										<type>check</type>
+									</config>
+								</TCEforms>
+							</flickrLightbox>
+						</el>
+					</Flickr>
+					<Accordion>
+						<type>array</type>
+						<tx_templavoila>
+							<title>Accordion</title>
+						</tx_templavoila>
+						<el>
+							<accordionTitle>
+								<TCEforms>
+									<label>Title:</label>
+									<config>
+										<type>input</type>
+										<size>30</size>
+										<max>50</max>
+										<default></default>
+									</config>
+								</TCEforms>
+							</accordionTitle>
+							<accordionCEs>
+								<TCEforms>
+									<label>Content Elements:</label>
+									<config>
+										<type>group</type>
+										<internal_type>db</internal_type>
+										<allowed>tt_content</allowed>
+										<size>5</size>
+										<minitems>0</minitems>
+										<maxitems>50</maxitems>
+										<show_thumbs>1</show_thumbs>
+									</config>
+								</TCEforms>
+							</accordionCEs>
+							<accordionWidth>
+								<TCEforms>
+									<label>Width:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>350</default>
+									</config>
+								</TCEforms>
+							</accordionWidth>
+							<accordionHeight>
+								<TCEforms>
+									<label>Height:</label>
+									<config>
+										<type>input</type>
+										<size>8</size>
+										<max>5</max>
+										<eval>int</eval>
+										<default>350</default>
+									</config>
+								</TCEforms>
+							</accordionHeight>
+						</el>
+					</Accordion>
+				</el>
+			</Widgets>
+		</el>
+	</ROOT>
+</T3DataStructure>
